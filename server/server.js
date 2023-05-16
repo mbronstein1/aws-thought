@@ -1,6 +1,7 @@
 const express = require('express');
 const PORT = process.env.PORT || 3001;
 const userRoutes = require('./routes/user-routes');
+const imageRoutes = require('./routes/image-upload');
 
 const app = express();
 app.use(express.json());
@@ -11,5 +12,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.use('/api', userRoutes);
+app.use('/api', imageRoutes);
 
 app.listen(PORT, () => console.log(`API Server now listening on PORT ${PORT}`));
