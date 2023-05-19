@@ -9,18 +9,18 @@ import Profile from './pages/Profile';
 function App() {
   return (
     <Router>
-    <div className="flex-column justify-flex-start min-100-vh">
-      <Header />
-      <div className="container">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/profile/:username" component={Profile} />
-          <Route component={NoMatch} />
-        </Switch>
+      <div className='flex-column justify-flex-start min-100-vh'>
+        <Header />
+        <div className='container'>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/profile/:username' component={Profile} />
+            <Route component={NoMatch} />
+          </Switch>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  </Router>
+    </Router>
   );
 }
 
