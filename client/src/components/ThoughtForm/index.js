@@ -40,6 +40,7 @@ const ThoughtForm = ({ setThoughtList }) => {
 
     // clear form value
     setFormState({ username: '', thought: '' });
+    fileInput.current.value = null;
     setCharacterCount(0);
   };
 
@@ -83,6 +84,12 @@ const ThoughtForm = ({ setThoughtList }) => {
           <button className='btn' onClick={handleImageUpload} type='submit'>
             Upload
           </button>
+          {formState.image && (
+            <>
+              <p>Preview image: </p>
+              <img src={formState.image} alt='preview' width='200px' />
+            </>
+          )}
         </label>
         <button className='btn col-12 ' type='submit'>
           Submit

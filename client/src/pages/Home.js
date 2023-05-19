@@ -20,13 +20,13 @@ const Home = () => {
     };
 
     fetchData();
-  }, []);
+  }, [thoughts]);
 
   return (
     <main>
       <div className='flex-row justify-space-between'>
         <div className='col-12 mb-3'>
-          <ThoughtForm setThoughtList={setThoughts}/>
+          <ThoughtForm setThoughtList={setThoughts} />
         </div>
         <div className={`col-12 mb-3 `}>
           {!isLoaded ? <div>Loading...</div> : <ThoughtList thoughts={thoughts} setThoughts={setThoughts} title='Some Feed for Thought(s)...' />}
